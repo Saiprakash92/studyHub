@@ -1,0 +1,675 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav button {
+    padding: 10px;
+    margin: 5px;
+    background: #efbf3e;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 1px darkgrey;
+    color: white;
+    border: none;
+    font-size: 12px;
+}
+
+.nav button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s all linear;
+}
+
+.link-btn:hover {
+    transition: 1s all linear;
+    background-color: white;
+    color: black;
+}
+
+.nav:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+/* login */
+.bloc-tabs {
+    display: flex;
+    /* background: lightgrey; */
+}
+
+.login-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 8px;
+}
+
+.icon-log {
+    font-size: 22px;
+}
+
+.login-input input {
+    background: transparent;
+    border: none;
+}
+
+.login-input:hover {
+    border-bottom: 1px solid rgb(235, 88, 9);
+    transition: 1s all linear;
+}
+
+.login-input input:focus {
+    font-style: italic;
+    color: #2a261a;
+}
+
+.tabs {
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    border: unset;
+    color: black;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+}
+
+.tabs:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+
+.active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    color: #000;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 50px;
+    opacity: 0.5;
+    background: rgb(140, 154, 177);
+}
+
+.content {
+    background-image: url(../../Assets/mission-vision-banner.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.form-container-login {
+    height: 37vh;
+    display: flex;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    width: 216px;
+    background: rgb(255 255 255 / 90%);
+    margin: auto;
+    margin-top: 5%;
+    padding: 22px;
+}
+
+.form-container-login img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.form-container-login input {
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+}
+
+.create-account-btn {
+    font-size: 15px;
+}
+
+.create-account-btn a {
+    text-decoration: underline;
+    margin-left: 4px;
+    color: blue;
+}
+
+
+.form-container-btn {
+    padding: 10px;
+    background: #efbf3e;
+    border-radius: 5px;
+    box-shadow: -1px 1px 1px 1px darkgrey;
+    color: white;
+    border: none;
+    width: -webkit-fill-available;
+    display: block;
+    margin: 16px 0px;
+}
+
+
+/* register  */
+.form-body-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../../Assets/mission-vision-banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.register-head-sub {
+    background: #73b2a3d9;
+    width: 169px;
+    height: 231px;
+    color: white;
+    padding: 22px;
+    font-size: 20px;
+}
+
+.register-head-sub p {
+    display: flex;
+    align-items: center;
+
+}
+
+.error-svg svg {
+    font-size: 20px;
+}
+
+.register-head-sub svg {
+    background-color: #efd73e;
+    font-size: 20px;
+    margin: 2px;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.form-register {
+    text-align: center;
+    width: 300px;
+    border: none;
+    background: rgb(255 255 255 / 90%);
+    padding: 17px;
+}
+
+.form-register input {
+    padding: 7px;
+    border: none;
+    outline: none;
+}
+
+.form-body-register button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.form button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+/* error-page */
+.error-page {
+    text-align: center;
+    background-color: #efbf3e;
+}
+
+.error-page img {
+    width: 50%;
+    height: 59vh;
+    margin: 10%;
+
+}
+
+/* subkect-list  */
+
+.subj-list {
+    margin: 15px;
+    text-transform: capitalize;
+    background-color: #e4e4e4;
+    width: 450px;
+    display: flex;
+    box-shadow: 0px 0px 4px 0px #b0a0a0;
+}
+
+.pad {
+    padding: 11px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.options {
+    display: flex;
+    float: right;
+    margin-top: 5px;
+}
+
+.options svg {
+    color: rgb(35, 18, 220);
+}
+
+.subj-list div li:hover {
+    color: white;
+}
+
+.subj-list li {
+    color: black;
+    list-style: none;
+    margin: 2px;
+}
+
+/* Modal  */
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 27px;
+    color: red;
+    font-size: 24px;
+    right: 23px;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.form-register-class {
+    width: 221px;
+    padding: 18px;
+}
+
+.form-register-class input {
+    padding: 7px;
+    margin: 4px;
+
+}
+
+/* student register form  */
+.std-register-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../Assets/mission-vision-banner.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.std-register-form button {
+    padding: 10px;
+    margin: 5px;
+    background: #efbf3e;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 1px darkgrey;
+    color: white;
+    border: none;
+}
+
+.std-register-form form input:focus {
+    outline: 2px solid lightblue;
+}
+
+/* drop-down */
+.input-drop-down {
+    padding: 7px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    background-color: #efbf3e;
+}
+
+
+.div-home-nav-btn {
+    display: flex;
+    align-items: center;
+}
+
+
+select {
+    color: white;
+    outline: unset;
+    width: 20px;
+    background: transparent;
+    border: none;
+}
+
+select option {
+    color: black;
+    font-family: heebo, sans-serif;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+/* .subject-data */
+
+.subject-data {
+    width: -webkit-fill-available;
+    background: whitesmoke;
+    text-transform: capitalize;
+    margin: 3%;
+    box-shadow: 0px 0px 6px 0px #a3a2a2;
+
+}
+
+.sub-notes {
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.subject-data embed {
+    object-fit: fill;
+    height: 50vh;
+    width: -webkit-fill-available;
+
+}
+
+.link-btn-notes {
+    cursor: pointer;
+    pointer-events: inherit;
+    font-size: 20px;
+    color: #000;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 35px;
+}
+
+.details-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.details-main span {
+    font-size: 14px;
+}
+
+.link-btn-delete-notes {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 13px;
+    border: none;
+    color: rgb(13, 13, 13);
+}
+
+.link-btn-notes:hover {
+    color: rgb(21, 74, 231);
+}
+
+.link-btn-delete-notes:hover {
+    color: rgb(231, 21, 21);
+}
+
+.span-date {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px;
+    display: block;
+    margin: 3px;
+    font-size: 11px;
+}
+
+.span-title {
+    font-family: heebo, sans-serif;
+    padding: 5px;
+    display: block;
+    margin: 3px;
+}
+
+.input-details {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d68484;
+    line-height: 16px;
+    padding: 9px;
+    position: relative;
+    width: 243px;
+    margin: auto;
+    color: white;
+    transform: translateY(17px);
+}
+
+.cancel {
+    position: absolute;
+    cursor: pointer;
+    top: -6px;
+    font-size: 16px;
+    right: 0px;
+    background: inherit;
+    border-radius: 77px;
+}
+
+.add {
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 6px;
+    background-color: #a8ef3e;
+}
+
+.select-file {
+    font-size: 15px;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 6px;
+    background-color: #a8ef3e;
+    display: inline-block;
+    padding: 5px;
+}
+
+.input-details input {
+    width: 300px;
+    margin: 2px;
+    padding: 3px;
+    border: none;
+    background-color: transparent;
+    outline: unset;
+}
+
+.input-details span {
+    background-color: #7f7979;
+    width: 0px;
+    height: 24px;
+    border: 1px solid #7f7979;
+    ;
+}
+
+.input-details input:focus {
+    border-bottom: 1px solid blue;
+    transition: 1s all;
+}
+
+.input-tile {
+    width: 87px;
+}
+
+.link-btn {
+    font-size: 12px;
+    padding: 8px;
+    margin: 5px;
+    background: #efbf3e;
+    border-radius: 5px;
+    box-shadow: -1px 1px 5px 1px darkgrey;
+    color: white;
+    border: none;
+}
+
+/* profiles */
+.table-profile {
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+.firs-div {
+    padding: 11px;
+    line-height: 2;
+    width: 24%;
+    margin: 7px;
+    background: #e4e4e4;
+}
+
+.main-content-div {
+    display: flex;
+    align-items: baseline;
+
+}
+
+.announce {
+    display: flex;
+    background-color: #ffffff;
+    padding: 3px;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-family: heebo, sans-serif;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.announce svg {
+    background-color: lightsalmon;
+    padding: 3px;
+    color: white;
+    border-radius: 50%;
+}
+
+/* student add  */
+
+.addstd-form-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addstd-form-flex p {
+    background: #d7fae1;
+    padding: 4px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    width: 198px;
+}
+
+.addstd-form-flex h4 {
+    text-align: center;
+}
+
+.addstd-form-flex div {
+    padding: 20px;
+    margin-top: 7px;
+    background: aliceblue;
+}
+
+.addstd-form-flex p button {
+    cursor: pointer;
+    border: none;
+    color: red;
+    font-size: 16px;
+    border-radius: 50%;
+    background: beige;
+}
+
+.span-left {
+    margin-left: 26%;
+}
+
+.std-register-form-add-std {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.std-register-form-add-std form {
+    text-align: center;
+    width: 300px;
+}
+
+
+.std-register-form-add-std input {
+    padding: 7px;
+    width: 200px;
+    margin: 5px;
+}

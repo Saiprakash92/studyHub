@@ -1,0 +1,12 @@
+#grid container 
+grid -template-columns:repeat(auto-fit,mimax(280px,1fr));
+grid-gap:10px;  
+padding:10px;
+box-sizing:border-box; 
+ 
+ #parent container.box for grid
+position:relative;
+background:#fff;
+padding:20px 40px ;
+text-align:center;
+overflow:hidden;
